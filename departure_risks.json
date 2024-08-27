@@ -1,0 +1,281 @@
+[
+  {
+    "user_id": "emp12345",
+    "secret_risk": {
+      "low": [],
+      "medium": [
+        {
+          "secret_id": "api_key_001",
+          "name": "Production API Key",
+          "description": "Used for authenticating requests to the payment gateway API in production environment",
+          "risk_factors": {
+            "PERSISTENT_ACCESS_RISK": "MEDIUM"
+          },
+          "justifications": {
+            "PERSISTENT_ACCESS_RISK": "PERSISTENT_ACCESS_RISK: MEDIUM\nThis secret was last accessed 7 days ago and is due for rotation in 19 days. This represents a medium risk due to either recent access or a somewhat distant rotation date."
+          },
+          "mitigation_strategies": {
+            "PERSISTENT_ACCESS_RISK": "Rotate key within the next 30 days"
+          },
+          "additional_context": {
+            "external_mitigation": "PRESENT",
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_ACCESS": "HIGH",
+              "SYSTEM_COMPROMISE": "MEDIUM",
+              "COMPLIANCE_VIOLATION": "HIGH",
+              "INTELLECTUAL_PROPERTY_THEFT": "LOW",
+              "SERVICE_CRITICALITY": "LOW",
+              "DATA_SENSITIVITY": "LOW"
+            }
+          }
+        }
+      ],
+      "high": [
+        {
+          "secret_id": "db_cred_002",
+          "name": "Database Credentials",
+          "description": "Grants read/write access to the main customer database",
+          "risk_factors": {
+            "PERSISTENT_ACCESS_RISK": "HIGH"
+          },
+          "justifications": {
+            "PERSISTENT_ACCESS_RISK": "PERSISTENT_ACCESS_RISK: HIGH\nThis secret was last accessed 4 days ago and is not scheduled for rotation. This represents a high risk due to recent access and distant rotation date."
+          },
+          "mitigation_strategies": {
+            "PERSISTENT_ACCESS_RISK": "Rotate key within the next 7 days"
+          },
+          "additional_context": {
+            "external_mitigation": "PARTIAL",
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "HIGH",
+              "UNAUTHORIZED_ACCESS": "HIGH",
+              "SYSTEM_COMPROMISE": "MEDIUM",
+              "COMPLIANCE_VIOLATION": "HIGH",
+              "INTELLECTUAL_PROPERTY_THEFT": "MEDIUM",
+              "SERVICE_CRITICALITY": "LOW",
+              "DATA_SENSITIVITY": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "file_transfer_risk": {
+      "low": [],
+      "medium": [],
+      "high": [
+        {
+          "activity_id": "file_001",
+          "name": "Q4 Financial Report.xlsx",
+          "description": "Contains sensitive financial projections and unreleased quarterly results",
+          "risk_factors": {
+            "DATA_EXFILTRATION": "HIGH"
+          },
+          "justifications": {
+            "DATA_EXFILTRATION": "DATA_EXFILTRATION: HIGH\nThis file transfer occurred 5 days ago. The file size is 2.5 MB. It was transferred from Google Drive to Personal Laptop. The sharing status is 'Internal - Finance Team'.\nThis represents a high risk due to recent activity, large file size, or sensitive destination/sharing status."
+          },
+          "mitigation_strategies": {
+            "DATA_EXFILTRATION": "Contact legal department and contact employee to ask for justification"
+          },
+          "additional_context": {
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_SHARING": "LOW",
+              "SENSITIVE_INFORMATION_EXPOSURE": "MEDIUM",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_LOSS": "MEDIUM",
+              "ACTIVITY_TYPE": "LOW",
+              "FILE_SIZE": "LOW"
+            }
+          }
+        },
+        {
+          "activity_id": "transfer_001",
+          "name": "Large File Transfer",
+          "description": "Bulk transfer of multiple files to external storage",
+          "risk_factors": {
+            "DATA_EXFILTRATION": "HIGH"
+          },
+          "justifications": {
+            "DATA_EXFILTRATION": "DATA_EXFILTRATION: HIGH\nThis file transfer occurred 6 days ago. The file size is 500 MB. It was transferred from Company File Server to Personal Cloud Storage. The sharing status is 'External Transfer'.\nThis represents a high risk due to recent activity, large file size, or sensitive destination/sharing status."
+          },
+          "mitigation_strategies": {
+            "DATA_EXFILTRATION": "Contact legal department and contact employee to ask for justification"
+          },
+          "additional_context": {
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_SHARING": "MEDIUM",
+              "SENSITIVE_INFORMATION_EXPOSURE": "HIGH",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_LOSS": "MEDIUM",
+              "ACTIVITY_TYPE": "LOW",
+              "FILE_SIZE": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "overall_risk_level": "HIGH"
+  },
+  {
+    "user_id": "emp67890",
+    "secret_risk": {
+      "low": [],
+      "medium": [],
+      "high": [
+        {
+          "secret_id": "ssh_key_003",
+          "name": "Server SSH Key",
+          "description": "Provides access to production servers for maintenance and deployment",
+          "risk_factors": {
+            "PERSISTENT_ACCESS_RISK": "HIGH"
+          },
+          "justifications": {
+            "PERSISTENT_ACCESS_RISK": "PERSISTENT_ACCESS_RISK: HIGH\nThis secret was last accessed 12 days ago and is due for rotation in 127 days. This represents a high risk due to recent access and distant rotation date.\nRisk level was adjusted due to:\n- The service 'Production Servers' is considered critical.\n- The data accessed is considered sensitive.\n- There are some external mitigation measures in place.\n- There are heightened risks in the following areas: UNAUTHORIZED_ACCESS, SYSTEM_COMPROMISE."
+          },
+          "mitigation_strategies": {
+            "PERSISTENT_ACCESS_RISK": "Rotate key within the next 7 days"
+          },
+          "additional_context": {
+            "external_mitigation": "PARTIAL",
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_ACCESS": "HIGH",
+              "SYSTEM_COMPROMISE": "HIGH",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_THEFT": "LOW",
+              "SERVICE_CRITICALITY": "LOW",
+              "DATA_SENSITIVITY": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "file_transfer_risk": {
+      "low": [],
+      "medium": [],
+      "high": [
+        {
+          "activity_id": "file_002",
+          "name": "Client Proposal Draft.docx",
+          "description": "Draft proposal for a major client, including pricing strategy",
+          "risk_factors": {
+            "DATA_EXFILTRATION": "HIGH"
+          },
+          "justifications": {
+            "DATA_EXFILTRATION": "DATA_EXFILTRATION: HIGH\nThis file transfer occurred 4 days ago. The file size is 1.8 MB. It was transferred from OneDrive to personal_email@example.com. The sharing status is 'Confidential'.\nThis represents a high risk due to recent activity, large file size, or sensitive destination/sharing status."
+          },
+          "mitigation_strategies": {
+            "DATA_EXFILTRATION": "Contact legal department and contact employee to ask for justification"
+          },
+          "additional_context": {
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_SHARING": "MEDIUM",
+              "SENSITIVE_INFORMATION_EXPOSURE": "HIGH",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_LOSS": "HIGH",
+              "ACTIVITY_TYPE": "LOW",
+              "FILE_SIZE": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "overall_risk_level": "HIGH"
+  },
+  {
+    "user_id": "emp24680",
+    "secret_risk": {
+      "low": [],
+      "medium": [],
+      "high": [
+        {
+          "secret_id": "oauth_token_004",
+          "name": "OAuth Access Token",
+          "description": "Used for accessing internal analytics dashboard and generating reports",
+          "risk_factors": {
+            "PERSISTENT_ACCESS_RISK": "HIGH"
+          },
+          "justifications": {
+            "PERSISTENT_ACCESS_RISK": "PERSISTENT_ACCESS_RISK: HIGH\nThis secret was last accessed 5 days ago and is not scheduled for rotation. This represents a high risk due to recent access and distant rotation date."
+          },
+          "mitigation_strategies": {
+            "PERSISTENT_ACCESS_RISK": "Rotate key within the next 7 days"
+          },
+          "additional_context": {
+            "external_mitigation": "PARTIAL",
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_ACCESS": "HIGH",
+              "SYSTEM_COMPROMISE": "MEDIUM",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_THEFT": "LOW",
+              "SERVICE_CRITICALITY": "LOW",
+              "DATA_SENSITIVITY": "LOW"
+            }
+          }
+        },
+        {
+          "secret_id": "aws_key_005",
+          "name": "AWS Root Account Key",
+          "description": "Provides full access to all AWS services and resources",
+          "risk_factors": {
+            "PERSISTENT_ACCESS_RISK": "HIGH"
+          },
+          "justifications": {
+            "PERSISTENT_ACCESS_RISK": "PERSISTENT_ACCESS_RISK: HIGH\nThis secret was last accessed 9 days ago and is due for rotation in 126 days. This represents a high risk due to recent access and distant rotation date.\nRisk level was adjusted due to:\n- The service 'AWS Cloud Infrastructure' is considered critical.\n- The data accessed is considered sensitive.\n- There are heightened risks in the following areas: DATA_EXFILTRATION, UNAUTHORIZED_ACCESS, SYSTEM_COMPROMISE, COMPLIANCE_VIOLATION, INTELLECTUAL_PROPERTY_THEFT."
+          },
+          "mitigation_strategies": {
+            "PERSISTENT_ACCESS_RISK": "Rotate key within the next 7 days"
+          },
+          "additional_context": {
+            "external_mitigation": "ABSENT",
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "HIGH",
+              "UNAUTHORIZED_ACCESS": "HIGH",
+              "SYSTEM_COMPROMISE": "HIGH",
+              "COMPLIANCE_VIOLATION": "HIGH",
+              "INTELLECTUAL_PROPERTY_THEFT": "HIGH",
+              "SERVICE_CRITICALITY": "LOW",
+              "DATA_SENSITIVITY": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "file_transfer_risk": {
+      "low": [],
+      "medium": [],
+      "high": [
+        {
+          "activity_id": "export_001",
+          "name": "Customer Database Export",
+          "description": "Full export of customer database including personal information",
+          "risk_factors": {
+            "DATA_EXFILTRATION": "HIGH"
+          },
+          "justifications": {
+            "DATA_EXFILTRATION": "DATA_EXFILTRATION: HIGH\nThis file transfer occurred 3 days ago. The file size is 150 MB. It was transferred from CRM System to Local Drive. The sharing status is 'Highly Restricted'.\nThis represents a high risk due to recent activity, large file size, or sensitive destination/sharing status.\nRisk level was adjusted due to:\n- The transferred data is considered sensitive.\n- The activity type 'Data Export' is considered risky.\n- There are heightened risks in the following areas: SENSITIVE_INFORMATION_EXPOSURE."
+          },
+          "mitigation_strategies": {
+            "DATA_EXFILTRATION": "Contact legal department and contact employee to ask for justification"
+          },
+          "additional_context": {
+            "heightened_risks": {
+              "DATA_EXFILTRATION": "MEDIUM",
+              "UNAUTHORIZED_SHARING": "LOW",
+              "SENSITIVE_INFORMATION_EXPOSURE": "HIGH",
+              "COMPLIANCE_VIOLATION": "MEDIUM",
+              "INTELLECTUAL_PROPERTY_LOSS": "LOW",
+              "ACTIVITY_TYPE": "LOW",
+              "FILE_SIZE": "LOW"
+            }
+          }
+        }
+      ]
+    },
+    "overall_risk_level": "HIGH"
+  }
+]

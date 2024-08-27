@@ -1,0 +1,131 @@
+{
+    "employees": [
+        {
+            "user_id": "emp12345",
+            "files_and_transfers": [
+                {
+                    "activity_id": "file_001",
+                    "activity_type": "File Access",
+                    "name": "Q4 Financial Report.xlsx",
+                    "file_type": "Spreadsheet",
+                    "description": "Contains sensitive financial projections and unreleased quarterly results",
+                    "timestamp": "2024-08-22T14:30:00Z",
+                    "size_mb": 2.5,
+                    "location": {
+                        "source": "Google Drive",
+                        "destination": "Personal Laptop"
+                    },
+                    "sharing_status": "Internal - Finance Team",
+                    "action": "Downloaded",
+                    "actor": "emp12345",
+                    "device": "Personal Laptop"
+                },
+                {
+                    "activity_id": "transfer_001",
+                    "activity_type": "Bulk Transfer",
+                    "name": "Large File Transfer",
+                    "file_type": "Multiple",
+                    "description": "Bulk transfer of multiple files to external storage",
+                    "timestamp": "2024-08-21T09:45:00Z",
+                    "size_mb": 500,
+                    "location": {
+                        "source": "Company File Server",
+                        "destination": "Personal Cloud Storage"
+                    },
+                    "sharing_status": "External Transfer",
+                    "action": "Transferred",
+                    "actor": "emp12345",
+                    "device": "Company Workstation"
+                }
+            ]
+        },
+        {
+            "user_id": "emp67890",
+            "files_and_transfers": [
+                {
+                    "activity_id": "file_002",
+                    "activity_type": "File Sharing",
+                    "name": "Client Proposal Draft.docx",
+                    "file_type": "Document",
+                    "description": "Draft proposal for a major client, including pricing strategy",
+                    "timestamp": "2024-08-23T11:15:00Z",
+                    "size_mb": 1.8,
+                    "location": {
+                        "source": "OneDrive",
+                        "destination": "personal_email@example.com"
+                    },
+                    "sharing_status": "Confidential",
+                    "action": "Shared",
+                    "actor": "emp67890",
+                    "device": "Company Laptop"
+                }
+            ]
+        },
+        {
+            "user_id": "emp24680",
+            "files_and_transfers": [
+                {
+                    "activity_id": "export_001",
+                    "activity_type": "Data Export",
+                    "name": "Customer Database Export",
+                    "file_type": "CSV",
+                    "description": "Full export of customer database including personal information",
+                    "timestamp": "2024-08-24T16:30:00Z",
+                    "size_mb": 150,
+                    "location": {
+                        "source": "CRM System",
+                        "destination": "Local Drive"
+                    },
+                    "sharing_status": "Highly Restricted",
+                    "action": "Exported",
+                    "actor": "emp24680",
+                    "device": "Company Desktop"
+                }
+            ]
+        },
+        {
+            "user_id": "emp13579",
+            "files_and_transfers": [
+                {
+                    "activity_id": "file_003",
+                    "activity_type": "File Access",
+                    "name": "Product Roadmap 2025.pptx",
+                    "file_type": "Presentation",
+                    "description": "Detailed product strategy and unreleased feature plans",
+                    "timestamp": "2024-08-25T10:00:00Z",
+                    "size_mb": 15.7,
+                    "location": {
+                        "source": "SharePoint",
+                        "destination": "USB Drive"
+                    },
+                    "sharing_status": "Restricted - Executive Team",
+                    "action": "Copied",
+                    "actor": "emp13579",
+                    "device": "Company Laptop"
+                }
+            ]
+        },
+        {
+            "user_id": "emp11223",
+            "files_and_transfers": [
+                {
+                    "activity_id": "transfer_002",
+                    "activity_type": "File Transfer",
+                    "name": "Project X Source Code",
+                    "file_type": "ZIP",
+                    "description": "Complete source code for unreleased Project X",
+                    "timestamp": "2024-08-26T14:45:00Z",
+                    "size_mb": 75,
+                    "location": {
+                        "source": "Git Repository",
+                        "destination": "Personal GitHub"
+                    },
+                    "sharing_status": "Confidential - R&D Only",
+                    "action": "Uploaded",
+                    "actor": "emp11223",
+                    "device": "Personal Laptop"
+                }
+            ]
+        }
+    ]
+}
