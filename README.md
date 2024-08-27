@@ -15,7 +15,6 @@ Departure Shield Backend is a Python-based service designed to assess and manage
 ## Technologies Used
 
 - Python 3.8+
-- Flask (for API endpoints)
 - OpenAI API
 - Google AI API
 - Anthropic API
